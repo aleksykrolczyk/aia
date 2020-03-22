@@ -1,0 +1,204 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  height: 10vh;
+  min-height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+header #title {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #title p {
+  font-size: 32px;
+}
+
+header #menu {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: #a09e9e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header #borger {
+  padding: 10px;
+  font-size: 28px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  background-color: #E0E4CC;
+  border-radius: 25%;
+}
+
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+#content .card {
+  background-color: #E0E4CC;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.75px;
+}
+
+#content .card .card-top .card-title {
+  font-size: 24px;
+  background-color: lightblue;
+  width: 45%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 0;
+  border-right: solid;
+  border-bottom: solid;
+  border-width: 0.75px;
+}
+
+#content .card .card-bottom {
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 5%;
+}
+
+@media only screen and (max-width: 599px) {
+  .card {
+    margin-top: 5vw;
+  }
+  #navbar p {
+    display: none;
+  }
+  #menu {
+    display: none !important;
+  }
+  #borger {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .card {
+    width: 42.5vw;
+    margin-top: 5vw;
+  }
+  .card:nth-of-type(1) {
+    width: 90vw;
+  }
+  .card:nth-of-type(1) .card-bottom {
+    padding: 2.5% !important;
+  }
+  #menu {
+    display: none !important;
+  }
+  #borger {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .card {
+    width: 30vw;
+  }
+  #borger {
+    display: none !important;
+  }
+}
+
+footer {
+  width: 100vw;
+  background-color: #E0E4CC;
+  text-align: center;
+  vertical-align: middle;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+/*# sourceMappingURL=@import '_reset.scss';.css.map */
