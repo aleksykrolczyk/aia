@@ -1,0 +1,49 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        a { margin: 10px; }
+        #content { border: 1px solid black; padding: 20px; width: 50%; }
+    </style>
+
+    <script>
+        function get(url){
+            return new Promise(function(resolve, reject){
+                let request = new XMLHttpRequest();
+                request.open('GET', url);
+
+                request.onload = function () {
+                    if(request.status === 200) resolve(request.response);
+                    else reject(Error("Status code different than 200 (" + request.status + ")"));
+                };
+                request.onerror = function () {
+                    reject(Error("Fatal error"));
+                };
+
+                request.send();
+            });
+        }
+        $(function () {
+            $('button').click(function () {
+                get($('input').val()).then(function (response) {
+                    $('#content').html(response);
+                }, function (error) {
+                    $('#content').text(error);
+                });
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header><nav>
+        <input type="text"/>
+        <button>load</button>
+    </nav></header>
+    <div id="content"></div>
+</body>
+</html>
