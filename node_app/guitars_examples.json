@@ -1,0 +1,48 @@
+[
+    {
+        "manufacturer": "Ibanez",
+        "model": "S420WK",
+        "is_bought": false
+    },
+    {
+        "manufacturer": "Ibanez",
+        "model": "SA360NQM",
+        "is_bought": false
+    },
+    {
+        "manufacturer": "Ibanez",
+        "model": "RGD Axion Label",
+        "is_bought": false
+    },
+    {
+        "manufacturer": "Tonezone",
+        "model": "HAZE Air",
+        "is_bought": false
+    },
+    {
+        "manufacturer": "Tonezone",
+        "model": "HAZE Solid Blue",
+        "is_bought": false
+    },
+    {
+        "manufacturer": ".strandberg*",
+        "model": "Boden Fusion 6 Black",
+        "is_bought": false
+    },
+    {
+        "manufacturer": "Kiesel",
+        "model": "Theos T7",
+        "is_bought": false
+    },
+    {
+        "manufacturer": "Charvel",
+        "model": "Satchel Signature Pro-Mod DK",
+        "is_bought": false
+    },
+    {
+        "manufacturer": "Charvel",
+        "model": "Guthrie Govan. Signature",
+        "is_bought": false
+    }
+
+]
