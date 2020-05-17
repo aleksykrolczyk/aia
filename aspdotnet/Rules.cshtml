@@ -1,0 +1,34 @@
+﻿@{ 
+    if (Session["Rules"] == null) {
+        Session["Rules"] = new List<String>() {"You do not talk about Fight Club", "Eat vegetables"};
+    }
+
+    List<String> rules = (List<String>)Session["Rules"];
+
+    String new_rule = Request["rule"];
+    if (IsPost && !String.IsNullOrEmpty(new_rule)) {
+        rules.Add(new_rule);
+        Session["Rules"] = rules;
+        Response.Redirect("Rules.cshtml");
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Rules </title>
+</head>
+<body>
+    <h1> Fight Club Rules: </h1>
+    <ul>
+        @foreach (String rule in rules) { <li> @rule </li> }
+    </ul>
+
+    <h1> Add new rule: </h1>
+    <form action="~/Rules.cshtml", method="post">
+        <input type="text" name="rule" id="rule" placeholder="Add new"> <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>
